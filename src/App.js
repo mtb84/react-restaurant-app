@@ -8,29 +8,27 @@ import CustomerInformation from "./components/CustomerInformation"
 
 
 function App(props) {
-  const [menu, setMenu] = useState(MenuItems);
-  const [total, setTotal] = useState(0);
-  const [newOrder, setNewOrder] = useState([]);
+  // const [menu, setMenu] = useState(MenuItems);
+  // const [total, setTotal] = useState(0);
+  // const [newOrder, setNewOrder] = useState([]);
 
-  const typeMain = menu.filter((menu) => menu.category === "Main");
-  const typeSide = menu.filter((menu) => menu.category === "Side");
-  const typeDrink = menu.filter((menu) => menu.category === "Drink");
 
-  const order = (item, price) => {
-    const newOrderItem = {
-      item,
-      price
-    };
-    setNewOrder([...newOrder, newOrderItem]);
-  }
 
-  const subtotal = (price) => {
-    setTotal(total + price)
-  }
+  // const order = (item, price) => {
+  //   const newOrderItem = {
+  //     item,
+  //     price
+  //   };
+  //   setNewOrder([...newOrder, newOrderItem]);
+  // }
 
-  const removeTotal = (price) => {
-    setTotal(total - price)
-  }
+  // const addTotal = (price) => {
+  //   setTotal(total + price)
+  // }
+
+  // const removeTotal = (price) => {
+  //   setTotal(total - price)
+  // }
 
 
   
@@ -41,24 +39,12 @@ function App(props) {
       </header>
       <div className='menu-body'>
         <h2 className='menu'>MENU</h2>
-      <div>
-        <h2>Main Items</h2>
-        <div>
-          {typeMain}
-        </div>
-        <h2>Side Items</h2>
-        <div>
-          {typeSide}
-        </div>
-        <h2>Drinks</h2>
-        <div>
-          {typeDrink}
-        </div>
+
       </div>
-      <p>Your Total: ${total}</p>
-      <CustomerInformation />
-      </div>
+      <p><MenuList /></p>
+      <p>Your Order: <Order /></p>
     </div>
+    
   )
 }
 export default App;
