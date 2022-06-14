@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import MenuList from './components/MenuList.js';
-import MenuItems from './components/MenuItems.js';
+import MenuItems from './menuItems.js';
 import Order from './components/Order'
 import './App.css';
 import CustomerInformation from "./components/CustomerInformation"
@@ -41,7 +41,7 @@ function App(props) {
         <h2 className='menu'>MENU</h2>
 
       </div>
-      <p><MenuList /></p>
+      
       <p>Your Order: <Order /></p>
     </div>
     

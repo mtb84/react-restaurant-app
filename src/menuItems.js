@@ -1,4 +1,4 @@
-const MenuItems = [
+const menuItems = [
     {
         name: "Burger 1",
         info: "Info for Burger 1", 
@@ -98,4 +98,4 @@ const MenuItems = [
 
 
 
-export default MenuItems
+export default menuItems;

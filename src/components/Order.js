@@ -6,7 +6,7 @@ import CustomerInformation from "./CustomerInformation.js";
 function Order() {
 
 
-<MenuList />
+
 
 
 // const addToOrder = () => {
@@ -25,7 +25,7 @@ function Order() {
 return(
 
     <div>
-
+        <MenuList />
         <button >Add to Order</button>
         <button >Remove from Order</button>
     </div>
