@@ -7,10 +7,20 @@ import './App.css';
 import CustomerInformation from "./components/CustomerInformation"
 
 
-function App(props) {
+function App() {
+  const [order, setOrder] = useState([]);
+
+  const addToOrder = ({name, price}) => {
+    const newOrderItem = {
+      name,
+      price
+    };
+    setOrder([...order, newOrderItem])
+
+  }
 
 
-
+  
   
   return (
     <div className='container'>
@@ -19,10 +29,9 @@ function App(props) {
       </header>
       <div className='menu-body'>
         <h2 className='menu'>MENU</h2>
-
+        <MenuList addToOrder={addToOrder}/>
+        <p>Your Order: <Order order={order} /></p>
       </div>
-      <MenuList />
-      <p>Your Order: <Order /></p>
     </div>
     
   )

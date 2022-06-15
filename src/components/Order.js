@@ -4,51 +4,25 @@ import menuItems from "../menuItems.js";
 import App from "../App.js";
 import CustomerInformation from "./CustomerInformation.js";
 
-function Order() {
+function Order({order}) {
 
+    const orderItems = order.map((orderItem, index) =>
+     <p key={index}>
+        {orderItem.name}
+        {orderItem.price}
+     </p>
+    )
 
-    const [menu, setMenu] = useState(menuItems);
-    const [total, setTotal] = useState(0);
-    const [newOrder, setNewOrder] = useState([]);
-  
-  
-  
-    const order = (item, price) => {
-      const newOrderItem = {
-        item,
-        price
-      };
-      setNewOrder([...newOrder, newOrderItem]);
-    }
-  
-    const addTotal = (price) => {
-      setTotal(total + price)
-    }
-  
-    const removeTotal = (price) => {
-      setTotal(total - price)
-    }
-
-
-// const addToOrder = () => {
-//     MenuList(name, price)
-//     total(price);
-//     order(name, price);
-// }
-
-// const removeFromOrder = () => {
-//     removeTotal(price);
-//     removeOrder(name);
-// }
-
-
+const total = order
+  .map(orderItem => orderItem.price)
+  .reduce((acc, i) => acc + i, 0);
 
 return(
 
-    <div>
-        <button onClick={addTotal}>Add to Order</button>
-        <button onClick={removeTotal}>Remove from Order</button>
-    </div>
+<div>
+  {orderItems}
+  {total}
+</div>
 
 );
 
