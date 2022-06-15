@@ -24,7 +24,7 @@ const menuItems = [
     {
         name: "Burger 4",
         info: "Info for Burger 4", 
-        price: 8.50,
+        price: 8.00,
         id: 4,
         category: "main"
     },
