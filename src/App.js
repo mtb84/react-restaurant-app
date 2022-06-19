@@ -17,11 +17,9 @@ function App() {
     };
     setOrder([...order, newOrderItem])
 
+
   }
 
-
-  
-  
   return (
     <div className='container'>
       <header>
@@ -30,7 +28,7 @@ function App() {
       <div className='menu-body'>
         <h2 className='menu'>MENU</h2>
         <MenuList addToOrder={addToOrder}/>
-        <p>Your Order: <Order order={order} /></p>
+        <p className='Order'>Your Order: <Order order={order} /></p>
       </div>
     </div>
     
