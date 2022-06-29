@@ -8,14 +8,14 @@ function Order({order}) {
 
     const orderItems = order.map((orderItem, index) =>
      <p key={index}>
-        {orderItem.name}: 
-        ${orderItem.price}
+        {orderItem.name}: ${orderItem.price}
      </p>
     )
 
 const total = order
   .map(orderItem => orderItem.price)
   .reduce((acc, i) => acc + i, 0);
+
 
 return(
 
